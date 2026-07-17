@@ -9,7 +9,7 @@ export const Route = createRootRoute({
     meta: [
       { charSet: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { title: 'TanStack Start App' },
+      { title: 'Frameforge' },
     ],
     links: [{ rel: 'stylesheet', href: appCss }],
   }),
@@ -27,7 +27,10 @@ function RootDocument({ children }: { children: ReactNode }) {
         <TanStackDevtools
           config={{ position: 'bottom-right' }}
           plugins={[
-            { name: 'TanStack Router', render: <TanStackRouterDevtoolsPanel /> },
+            {
+              name: 'TanStack Router',
+              render: <TanStackRouterDevtoolsPanel />,
+            },
           ]}
         />
         <Scripts />
